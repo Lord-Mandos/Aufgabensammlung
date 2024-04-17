@@ -1,16 +1,18 @@
 text = "Ich kann mit mehreren Worten eine Variabel beschreiben"
 
 words = text.lower().split()
-
 camel_text = ""
-first = True
 
 for word in words:
-    if first == True:
-        camel_text += word
-        first = False
-    else:
-        camel_text += word[0].upper()
-        camel_text += word[1:]
+    camel_text += word.capitalize()
+
+camel_text = camel_text[0].lower() + camel_text[1:]
 
 print(camel_text)
+
+
+############### Title version ###############
+
+text = text.title().replace( " ", "")
+text = text[0].lower() + text[1:]
+print(text)
